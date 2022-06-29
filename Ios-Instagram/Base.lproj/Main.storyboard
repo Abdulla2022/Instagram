@@ -185,8 +185,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="e79-K3-pCD">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="3Xf-QC-39A"/>
-                        <barButtonItem key="rightBarButtonItem" title="Share" id="fBn-Ds-xNX"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="3Xf-QC-39A">
+                            <connections>
+                                <action selector="didTapCancel:" destination="lIX-HF-zee" id="fg1-kI-dIp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="fBn-Ds-xNX">
+                            <connections>
+                                <action selector="didTapShare:" destination="lIX-HF-zee" id="WxG-Hw-i0X"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRZ-fm-JQI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -287,7 +295,7 @@
                                                     <rect key="frame" x="0.0" y="30" width="414" height="201"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstPost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TP-V5-3M3">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FirstPost" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TP-V5-3M3">
                                                     <rect key="frame" x="14" y="239" width="374" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -319,7 +327,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="insta_camera_btn" id="FFm-F4-bB8">
                             <connections>
                                 <action selector="Post:" destination="kB8-nU-72g" id="BEB-Bo-H0z"/>
-                                <segue destination="mul-bg-F8Q" kind="presentation" id="F5i-r8-MrV"/>
+                                <segue destination="mul-bg-F8Q" kind="presentation" identifier="composeSegue" id="F5i-r8-MrV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

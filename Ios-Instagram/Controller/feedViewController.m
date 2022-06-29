@@ -7,8 +7,8 @@
 
 #import "feedViewController.h"
 #import "Parse/Parse.h"
-
-@interface feedViewController ()<UITableViewDelegate,UITableViewDataSource>
+#import "PostCell.h"
+@interface feedViewController ()
 @property (strong, nonatomic) NSMutableArray *myArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
@@ -20,6 +20,7 @@
     [super viewDidLoad];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
 }
 
 - (IBAction)LogOut:(id)sender {
@@ -29,18 +30,12 @@
 }
 
 - (IBAction)Post:(id)sender {
+
+//    [self performSegueWithIdentifier:@"composeSegue" sender:nil];
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     
+    return self.myArray.count;
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

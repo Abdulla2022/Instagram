@@ -19,5 +19,4 @@
     // Do any additional setup after loading the view.
 }
 
-//- (IBAction)registerUser:(id)sender {   
 @end

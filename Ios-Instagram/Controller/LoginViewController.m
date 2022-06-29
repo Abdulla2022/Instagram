@@ -7,7 +7,8 @@
 
 #import "LoginViewController.h"
 #import "Parse/Parse.h"
-//#import "ComposeViewController.h"
+#import "ComposeViewController.h"
+
 @interface LoginViewController ()
 
 @end
@@ -23,7 +24,7 @@
     [self userLogin];
 }
 
--(void)userLogin{
+- (void)userLogin {
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
     
@@ -36,11 +37,12 @@
         }
     }];
 }
+
 - (IBAction)registerUser:(id)sender {
     [self userRegister];
 }
 
--(void)userRegister{
+- (void)userRegister {
     PFUser *newUser = [PFUser user];
 
     newUser.username = self.usernameField.text;

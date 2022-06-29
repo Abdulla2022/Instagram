@@ -140,6 +140,7 @@
 				806B9807286BA19F0094A7B3 /* View */,
 				806B9808286BA1AB0094A7B3 /* Controller */,
 				806B97C8286B51D60094A7B3 /* AppDelegate.h */,
+				806B97D1286B51D60094A7B3 /* Main.storyboard */,
 				806B97C9286B51D60094A7B3 /* AppDelegate.m */,
 				806B97CB286B51D60094A7B3 /* SceneDelegate.h */,
 				806B97CC286B51D60094A7B3 /* SceneDelegate.m */,
@@ -171,8 +172,6 @@
 		806B9806286BA1920094A7B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				809CD4B5286BC9260070B32B /* PostCell.h */,
-				809CD4B6286BC9260070B32B /* PostCell.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,7 +179,8 @@
 		806B9807286BA19F0094A7B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				806B97D1286B51D60094A7B3 /* Main.storyboard */,
+				809CD4B5286BC9260070B32B /* PostCell.h */,
+				809CD4B6286BC9260070B32B /* PostCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
