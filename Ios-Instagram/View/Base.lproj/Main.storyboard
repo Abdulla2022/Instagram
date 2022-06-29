@@ -87,6 +87,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="loginUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qkm-CR-Zji"/>
+                                    <segue destination="4SL-av-lgC" kind="presentation" identifier="homeSegue" id="r4j-CG-q9o"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2mv-YX-ymD">
@@ -107,6 +108,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="registerUser:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZk-fZ-0pd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -124,7 +128,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="OZn-MG-PH4">
             <objects>
-                <tabBarController id="4SL-av-lgC" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarController" id="4SL-av-lgC" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a4c-9p-nAm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -195,7 +199,7 @@
                 <navigationController id="2xV-h3-FeO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" id="qvx-Ko-cnd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BkY-So-fRd">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
@@ -248,7 +252,7 @@
                 <navigationController id="7SI-Ts-2b4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Feed" id="zHF-kz-Bll"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TRj-oB-2S8">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -264,7 +268,7 @@
             <objects>
                 <viewController id="kB8-nU-72g" customClass="feedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zEr-AK-4D6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NpE-pi-eNN">
@@ -272,7 +276,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="279" id="2a5-ly-yWk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" rowHeight="279" id="2a5-ly-yWk" customClass="PostCell">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="279"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2a5-ly-yWk" id="32F-4i-EDB">
@@ -319,11 +323,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="authorImage" destination="y6F-dL-ayJ" id="Xn2-Qt-08i"/>
-                        <outlet property="captionField" destination="0TP-V5-3M3" id="B5q-d4-dNh"/>
-                        <outlet property="postedDate" destination="Qfj-m2-CnL" id="me3-8d-VNt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IG5-4f-b7q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

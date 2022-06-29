@@ -10,9 +10,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface feedViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIImageView *authorImage;
-@property (weak, nonatomic) IBOutlet UILabel *postedDate;
-@property (weak, nonatomic) IBOutlet UILabel *captionField;
 
 @end
 

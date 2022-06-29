@@ -7,7 +7,7 @@
 
 #import "LoginViewController.h"
 #import "Parse/Parse.h"
-#import "ComposeViewController.h"
+//#import "ComposeViewController.h"
 @interface LoginViewController ()
 
 @end
@@ -20,6 +20,10 @@
 }
 
 - (IBAction)loginUser:(id)sender {
+    [self userLogin];
+}
+
+-(void)userLogin{
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
     
@@ -28,32 +32,31 @@
             NSLog(@"User log in failed: %@", error.localizedDescription);
         } else {
             NSLog(@"User logged in successfully");
-        
-        
+            [self performSegueWithIdentifier:@"homeSegue" sender:nil];
         }
     }];
 }
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    // Code to initialize Parse
-    
-    
-    // (See above section 'Parse `initializeWithConfiguration` vs `setApplicationId`', if you have not already set it up)
-        
-    if (PFUser.currentUser) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
-        self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"AuthenticatedViewController"];
-    }
-
-    return YES;
+- (IBAction)registerUser:(id)sender {
+    [self userRegister];
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-        UINavigationController *navigationController = [segue destinationViewController];
-        ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
-            
+-(void)userRegister{
+    PFUser *newUser = [PFUser user];
+
+    newUser.username = self.usernameField.text;
+    newUser.password = self.passwordField.text;
+
+    [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
+        if (error != nil) {
+            NSLog(@"Error: %@", error.localizedDescription);
+        } else {
+            NSLog(@"User registered successfully");
+
+           // [self dismissViewControllerAnimated:YES completion:nil];
+            [self performSegueWithIdentifier:@"homeSegue" sender:nil];
+        }
+    }];
+
 }
 
 @end

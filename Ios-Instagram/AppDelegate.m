@@ -16,24 +16,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     ParseClientConfiguration *config = [ParseClientConfiguration  configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
 
-        configuration.applicationId = @"VhLeD9KTrrTpNgktmuVYe6pdG5U8ITDaJ8SmxLYR"; // <
+        configuration.applicationId = @"VhLeD9KTrrTpNgktmuVYe6pdG5U8ITDaJ8SmxLYR";
         configuration.clientKey = @"wiSzI4pIEY07MSWQ2awhqif296yhCuFcTBFl95a4";
         configuration.server = @"https://parseapi.back4app.com";
     }];
 
     [Parse initializeWithConfiguration:config];
-    PFObject *gameScore = [PFObject objectWithClassName:@"GameScore"];
-    gameScore[@"score"] = @1337;
-    gameScore[@"playerName"] = @"Sean Plott";
-    gameScore[@"cheatMode"] = @NO;
-    [gameScore saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if (succeeded) {
-            NSLog(@"Object saved!");
-        } else {
-            NSLog(@"Error: %@", error.description);
-        }
-    }];
-    return YES;
     return YES;
 }
 
