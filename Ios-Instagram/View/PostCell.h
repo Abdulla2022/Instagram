@@ -13,7 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *authorImage;
 @property (weak, nonatomic) IBOutlet UILabel *postedDate;
 @property (weak, nonatomic) IBOutlet UILabel *captionField;
-
 @end
 
 NS_ASSUME_NONNULL_END

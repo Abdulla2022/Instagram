@@ -3,7 +3,7 @@
 
 **Abdullahi** is a photo sharing app using Parse as its backend.
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
 ## User Stories
 
@@ -15,7 +15,7 @@ The following **required** functionality is completed:
 - [x] User can take a photo, add a caption, and post it to "Instagram"
 - [x] User can view the last 20 posts submitted to "Instagram"
 - [x] User can pull to refresh the last 20 posts submitted to "Instagram"
-- [] User can tap a post to view post details, including timestamp and caption
+- [X] User can tap a post to view post details, including timestamp and caption
 
 The following **optional** features are implemented:
 
