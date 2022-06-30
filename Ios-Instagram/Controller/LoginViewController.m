@@ -31,10 +31,9 @@
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         if (error != nil) {
             NSLog(@"User log in failed: %@", error.localizedDescription);
-        } else {
-            NSLog(@"User logged in successfully");
-            [self performSegueWithIdentifier:@"homeSegue" sender:nil];
         }
+        NSLog(@"User logged in successfully");
+        [self performSegueWithIdentifier:@"homeSegue" sender:nil];
     }];
 }
 
@@ -44,21 +43,18 @@
 
 - (void)userRegister {
     PFUser *newUser = [PFUser user];
-
+    
     newUser.username = self.usernameField.text;
     newUser.password = self.passwordField.text;
-
+    
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
-        } else {
-            NSLog(@"User registered successfully");
-
-           // [self dismissViewControllerAnimated:YES completion:nil];
-            [self performSegueWithIdentifier:@"homeSegue" sender:nil];
         }
+        NSLog(@"User registered successfully");
+        [self performSegueWithIdentifier:@"homeSegue" sender:nil];
     }];
-
+    
 }
 
 @end
