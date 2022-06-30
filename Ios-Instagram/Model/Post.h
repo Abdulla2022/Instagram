@@ -11,11 +11,6 @@
 @property (nonatomic, strong) NSNumber *likeCount;
 @property (nonatomic, strong) NSNumber *commentCount;
 
-
-/// public class method that lets the user send therir post to the database
-/// @param image the image the user wants to post
-/// @param caption text of the post
-/// @param completion <#completion description#>
 + (void) postUserImage: ( UIImage * _Nullable )image withCaption: ( NSString * _Nullable )caption withCompletion: (PFBooleanResultBlock  _Nullable)completion;
 
 @end

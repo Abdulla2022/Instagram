@@ -31,8 +31,8 @@ NSInteger *maxNumberOfPosts = 20;
 - (IBAction)LogOut:(id)sender {
     [PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {
     }];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"HomeFeed" bundle:nil];
-    UITabBarController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UITabBarController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"LoginHome"];
     self.view.window.rootViewController = tabBarController;
 }
 

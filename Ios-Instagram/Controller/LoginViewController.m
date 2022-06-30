@@ -32,7 +32,7 @@
             [self presentViewController:alert animated:YES completion:nil];
             
         }
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"HomeFeed" bundle:nil];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         UITabBarController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
         self.view.window.rootViewController = tabBarController;
         
@@ -51,8 +51,9 @@
             return;
         }
         NSLog(@"User registered successfully");
-        [self performSegueWithIdentifier:@"homeSegue" sender:nil];
-    }];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UITabBarController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+        self.view.window.rootViewController = tabBarController;    }];
 }
 
 @end
