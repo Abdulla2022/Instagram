@@ -7,6 +7,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Parse/Parse.h"
+#import "PostCell.h"
+#import "Post.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailsViewController : UIViewController
@@ -14,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *postedDate;
 @property (weak, nonatomic) IBOutlet UIImageView *postImage;
 @property (weak, nonatomic) IBOutlet UILabel *postCaption;
+@property (weak, nonatomic) Post *post;
 
 @end
 

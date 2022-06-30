@@ -15,33 +15,31 @@
 
 @implementation LoginViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-}
-
 - (IBAction)loginUser:(id)sender {
-    [self userLogin];
-}
-
-- (void)userLogin {
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
-    
     [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser * user, NSError *  error) {
         if (error != nil) {
-            NSLog(@"User log in failed: %@", error.localizedDescription);
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Can not login"
+                                                                           message:@"Invalid Username/Password"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                  handler:^(UIAlertAction * action) {
+            }];
+            
+            [alert addAction:defaultAction];
+            [self presentViewController:alert animated:YES completion:nil];
+            
         }
-        NSLog(@"User logged in successfully");
-        [self performSegueWithIdentifier:@"homeSegue" sender:nil];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"HomeFeed" bundle:nil];
+        UITabBarController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
+        self.view.window.rootViewController = tabBarController;
+        
     }];
 }
 
 - (IBAction)registerUser:(id)sender {
-    [self userRegister];
-}
-
-- (void)userRegister {
     PFUser *newUser = [PFUser user];
     
     newUser.username = self.usernameField.text;
@@ -50,11 +48,11 @@
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);
+            return;
         }
         NSLog(@"User registered successfully");
         [self performSegueWithIdentifier:@"homeSegue" sender:nil];
     }];
-    
 }
 
 @end

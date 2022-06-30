@@ -16,7 +16,6 @@
 @implementation ComposeViewController
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info {
-    UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
     UIImage *editedImage = info[UIImagePickerControllerEditedImage];
     [self.postImage setImage:editedImage];
     [self dismissViewControllerAnimated:YES completion:nil];
