@@ -3,7 +3,6 @@
 //  Ios-Instagram
 //  Created by Abdullahi Ahmed on 6/29/22.
 //
-
 //  Post.m
 #import "Post.h"
 #import "Parse/Parse.h"
@@ -40,7 +39,6 @@
     newPost.caption = caption;
     newPost.likeCount = @(0);
     newPost.commentCount = @(0);
-    
     [newPost saveInBackgroundWithBlock: completion];
 }
 

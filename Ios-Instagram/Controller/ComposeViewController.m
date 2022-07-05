@@ -9,6 +9,7 @@
 #import "Parse/Parse.h"
 #import "PostCell.h"
 #import "Post.h"
+
 @interface ComposeViewController ()
 
 @end

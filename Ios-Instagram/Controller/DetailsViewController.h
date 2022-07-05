@@ -9,7 +9,6 @@
 #import "Parse/Parse.h"
 #import "PostCell.h"
 #import "Post.h"
-NS_ASSUME_NONNULL_BEGIN
 
 @interface DetailsViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIImageView *userProfileImage;
@@ -19,5 +18,3 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) Post *post;
 
 @end
-
-NS_ASSUME_NONNULL_END

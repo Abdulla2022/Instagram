@@ -22,7 +22,6 @@
 		806B97F1286B51D70094A7B3 /* Ios_InstagramUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 806B97F0286B51D70094A7B3 /* Ios_InstagramUITestsLaunchTests.m */; };
 		806B97FF286BA1420094A7B3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806B97FE286BA1420094A7B3 /* LoginViewController.m */; };
 		806B9802286BA15B0094A7B3 /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806B9801286BA15B0094A7B3 /* ComposeViewController.m */; };
-		806B9805286BA16B0094A7B3 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806B9804286BA16B0094A7B3 /* ProfileViewController.m */; };
 		806B980B286BA5C90094A7B3 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 806B980A286BA5C90094A7B3 /* FeedViewController.m */; };
 		807BCCD8286D2FEF00E1B489 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 807BCCD7286D2FEF00E1B489 /* DetailsViewController.m */; };
 		809CD4B7286BC9260070B32B /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 809CD4B6286BC9260070B32B /* PostCell.m */; };
@@ -73,8 +72,6 @@
 		806B97FE286BA1420094A7B3 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		806B9800286BA15B0094A7B3 /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
 		806B9801286BA15B0094A7B3 /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
-		806B9803286BA16B0094A7B3 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		806B9804286BA16B0094A7B3 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		806B9809286BA5C90094A7B3 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		806B980A286BA5C90094A7B3 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		807BCCD6286D2FEF00E1B489 /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -197,8 +194,6 @@
 				806B97FE286BA1420094A7B3 /* LoginViewController.m */,
 				806B9800286BA15B0094A7B3 /* ComposeViewController.h */,
 				806B9801286BA15B0094A7B3 /* ComposeViewController.m */,
-				806B9803286BA16B0094A7B3 /* ProfileViewController.h */,
-				806B9804286BA16B0094A7B3 /* ProfileViewController.m */,
 				806B9809286BA5C90094A7B3 /* FeedViewController.h */,
 				806B980A286BA5C90094A7B3 /* FeedViewController.m */,
 				807BCCD6286D2FEF00E1B489 /* DetailsViewController.h */,
@@ -472,7 +467,6 @@
 				807BCCD8286D2FEF00E1B489 /* DetailsViewController.m in Sources */,
 				806B9802286BA15B0094A7B3 /* ComposeViewController.m in Sources */,
 				806B980B286BA5C90094A7B3 /* FeedViewController.m in Sources */,
-				806B9805286BA16B0094A7B3 /* ProfileViewController.m in Sources */,
 				80013A1C286CE8340010734B /* Post.m in Sources */,
 				809CD4B7286BC9260070B32B /* PostCell.m in Sources */,
 				806B97CD286B51D60094A7B3 /* SceneDelegate.m in Sources */,

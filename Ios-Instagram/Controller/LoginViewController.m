@@ -27,24 +27,19 @@
             UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                                   handler:^(UIAlertAction * action) {
             }];
-            
             [alert addAction:defaultAction];
             [self presentViewController:alert animated:YES completion:nil];
-            
         }
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         UITabBarController *tabBarController = [storyboard instantiateViewControllerWithIdentifier:@"TabBarController"];
         self.view.window.rootViewController = tabBarController;
-        
     }];
 }
 
 - (IBAction)registerUser:(id)sender {
     PFUser *newUser = [PFUser user];
-    
     newUser.username = self.usernameField.text;
     newUser.password = self.passwordField.text;
-    
     [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * error) {
         if (error != nil) {
             NSLog(@"Error: %@", error.localizedDescription);

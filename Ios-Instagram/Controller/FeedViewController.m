@@ -49,7 +49,7 @@ NSInteger *maxNumberOfPosts = 20;
             return;
         }
         NSLog(@"😫😫😫 Error getting Feed: %@", error.localizedDescription);
-    }];
+    }]; 
 }
 
 - (IBAction)Post:(id)sender {
@@ -67,7 +67,7 @@ NSInteger *maxNumberOfPosts = 20;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell"];
+    PostCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     Post *post = self.listOfPost[indexPath.row];
     NSData *imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:post.image.url]];
     cell.authorImage.image = [UIImage imageWithData:imageData];
